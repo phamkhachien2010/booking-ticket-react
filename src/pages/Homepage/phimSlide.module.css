@@ -1,0 +1,24 @@
+.slide_parent {
+    width: 100%;
+    position: relative;
+}
+
+.slide_child {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.slide_parent:hover .slide_child {
+    opacity: 1;
+    transform: rotate(360deg);
+}

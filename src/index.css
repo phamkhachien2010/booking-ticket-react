@@ -13,6 +13,32 @@
     color: rgb(32, 139, 32);
 }
 
+.ant-modal {
+    width: 1000px !important;
+    height: 500px;
+}
+
+.ant-modal-content {
+    width: 1000px;
+}
+
+.ant-modal-wrap {
+    right: 0;
+}
+
+.ant-modal-body {
+    height: 500px;
+    width: 100%;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    width: auto !important;
+    left: 47% !important;
+}
+
 @media screen and (max-width: 768px) {
     .header_ul li {
         margin: 0 30px;

@@ -1,8 +1,19 @@
-import {call} from 'redux-saga/effects'
+import { all } from "redux-saga/effects";
+import * as BannerSaga from "./fileSaga/BannerSaga";
+import * as PhimSaga from "./fileSaga/PhimSaga";
+import * as HeThongRapSaga from "./fileSaga/HeThongRapSaga";
+import * as LichChieuSaga from './fileSaga/LichChieuSaga'
 
-export function* rootSaga(){
+export function* rootSaga() {
+  yield all([
+    BannerSaga.theoDoiGetAllBannerSaga(),
 
-    yield call([
-        
-    ])
+    PhimSaga.theoDoiGetAllPhimSaga(),
+
+    HeThongRapSaga.theoDoiGetAllHeThongRapSaga(),
+    HeThongRapSaga.theoDoiGetAllCumRamSaga(),
+    HeThongRapSaga.theoDoiGetAllRapSaga(),
+
+    LichChieuSaga.theoDoiGetAllLichChieuSaga(),
+  ]);
 }
